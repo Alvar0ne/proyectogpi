@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  habilidad: 1
+  necesidad: 1
+  competencia: 1
+
+two:
+  nombre: MyString
+  habilidad: 1
+  necesidad: 1
+  competencia: 1

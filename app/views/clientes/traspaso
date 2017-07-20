@@ -1,0 +1,153 @@
+ <div class="field">
+    <%= f.label :n1 %><br />
+    <%= f.label :n1, "Siempre", :value => 100  %>
+    <%= f.radio_button :n1, 100 %>
+    <%= f.label :n1, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n1, 50 %>
+    <%= f.label :n1, "A veces", :value => 25 %>
+    <%= f.radio_button :n1, 25 %>
+    <%= f.label :n1, "Nunca", :value => 0 %>
+    <%= f.radio_button :n1, 0, :checked => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :n2 %><br />
+    <%= f.label :n2, "Siempre", :value => 100  %>
+    <%= f.radio_button :n2, 100 %>
+    <%= f.label :n2, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n2, 50 %>
+    <%= f.label :n2, "A veces", :value => 25  %>
+    <%= f.radio_button :n2, 25 %>
+    <%= f.label :n2, "Nunca", :value => 0 %>
+    <%= f.radio_button :n2, 0, :checked => true %>
+  </div>
+
+<div class="field">
+    <%= f.label :n3 %><br />
+    <%= f.label :n3, "Siempre", :value => 100  %>
+    <%= f.radio_button :n3, 100%>
+    <%= f.label :n3, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n3, 50 %>
+    <%= f.label :n3, "A veces", :value => 25  %>
+    <%= f.radio_button :n3, 25 %>
+    <%= f.label :n3, "Nunca", :value => 0 %>
+    <%= f.radio_button :n3, 0, :checked => true %>
+  </div>
+
+<div class="field">
+    <%= f.label :n4 %><br />
+    <%= f.label :n4, "Siempre", :value => 100  %>
+    <%= f.radio_button :n4, 100%>
+    <%= f.label :n4, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n4, 50 %>
+    <%= f.label :n4, "A veces", :value => 25  %>
+    <%= f.radio_button :n4, 25 %>
+    <%= f.label :n4, "Nunca", :value => 0 %>
+    <%= f.radio_button :n4, 0, :checked => true %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :n5 %><br />
+    <%= f.label :n5, "Siempre", :value => 100  %>
+    <%= f.radio_button :n5, 100%>
+    <%= f.label :n5, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n5, 50 %>
+    <%= f.label :n5, "A veces", :value => 25  %>
+    <%= f.radio_button :n5, 25 %>
+    <%= f.label :n5, "Nunca", :value => 0 %>
+    <%= f.radio_button :n5, 0, :checked => true %>
+  </div>
+  <div class="field">
+    <%= f.label :n6 %><br />
+    <%= f.label :n6, "Siempre", :value => 100  %>
+    <%= f.radio_button :n6, 100%>
+    <%= f.label :n6, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n6, 50 %>
+    <%= f.label :n6, "A veces", :value => 25  %>
+    <%= f.radio_button :n6, 25 %>
+    <%= f.label :n6, "Nunca", :value => 0 %>
+    <%= f.radio_button :n6, 0, :checked => true %>
+  </div>
+  <div class="field">
+    <%= f.label :n7 %><br />
+    <%= f.label :n7, "Siempre", :value => 100  %>
+    <%= f.radio_button :n7, 100%>
+    <%= f.label :n7, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n7, 50 %>
+    <%= f.label :n7, "A veces", :value => 25  %>
+    <%= f.radio_button :n7, 25 %>
+    <%= f.label :n7, "Nunca", :value => 0 %>
+    <%= f.radio_button :n7, 0, :checked => true %>
+  </div>
+  <div class="field">
+    <%= f.label :n8 %><br />
+    <%= f.label :n8, "Siempre", :value => 100  %>
+    <%= f.radio_button :n8, 100%>
+    <%= f.label :n8, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n8, 50 %>
+    <%= f.label :n8, "A veces", :value => 25  %>
+    <%= f.radio_button :n8, 25 %>
+    <%= f.label :n8, "Nunca", :value => 0 %>
+    <%= f.radio_button :n8, 0, :checked => true %>
+  </div>
+  <div class="field">
+    <%= f.label :n9 %><br />
+    <%= f.label :n9, "Siempre", :value => 100  %>
+    <%= f.radio_button :n9, 100%>
+    <%= f.label :n9, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n9, 50 %>
+    <%= f.label :n9, "A veces", :value => 25  %>
+    <%= f.radio_button :n9, 25 %>
+    <%= f.label :n9, "Nunca", :value => 0 %>
+    <%= f.radio_button :n9, 0, :checked => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :n10 %><br />
+    <%= f.label :n10, "Siempre", :value => 100  %>
+    <%= f.radio_button :n10, 100%>
+    <%= f.label :n10, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n10, 50 %>
+    <%= f.label :n10, "A veces", :value => 25  %>
+    <%= f.radio_button :n10, 25 %>
+    <%= f.label :n10, "Nunca", :value => 0 %>
+    <%= f.radio_button :n10, 0, :checked => true %>
+  </div>
+
+    <div class="field">
+    <%= f.label :n11 %><br />
+    <%= f.label :n11, "Siempre", :value => 100  %>
+    <%= f.radio_button :n11, 100%>
+    <%= f.label :n11, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n11, 50 %>
+    <%= f.label :n11, "A veces", :value => 25  %>
+    <%= f.radio_button :n11, 25 %>
+    <%= f.label :n11, "Nunca", :value => 0 %>
+    <%= f.radio_button :n11, 0, :checked => true %>
+  </div>
+
+    <div class="field">
+    <%= f.label :n12 %><br />
+    <%= f.label :n12, "Siempre", :value => 100  %>
+    <%= f.radio_button :n12, 100%>
+    <%= f.label :n12, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n12, 50 %>
+    <%= f.label :n12, "A veces", :value => 25  %>
+    <%= f.radio_button :n12, 25 %>
+    <%= f.label :n12, "Nunca", :value => 0 %>
+    <%= f.radio_button :n12, 0, :checked => true %>
+  </div>
+
+    <div class="field">
+    <%= f.label :n13 %><br />
+    <%= f.label :n13, "Siempre", :value => 100  %>
+    <%= f.radio_button :n13, 100%>
+    <%= f.label :n13, "Regularmente", :value => 50  %>
+    <%= f.radio_button :n13, 50 %>
+    <%= f.label :n13, "A veces", :value => 25  %>
+    <%= f.radio_button :n13, 25 %>
+    <%= f.label :n13, "Nunca", :value => 0 %>
+    <%= f.radio_button :n13, 0, :checked => true %>
+  </div>
