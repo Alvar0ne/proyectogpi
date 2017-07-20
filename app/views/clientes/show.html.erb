@@ -1,4 +1,55 @@
 <p id="notice"><%= notice %></p>
 
+
+
+
+
+
+<% prom1= @cliente.h1 + @cliente.h2 + @cliente.h3 + @cliente.h4 + @cliente.h5 + @cliente.h6 + @cliente.h7 + @cliente.h8 + @cliente.h9 + @cliente.h10 + @cliente.h11 + @cliente.h12 + @cliente.h13 %>
+
+<% habi = prom1/13 %>
+
+Promedio Habilidades : <%= habi %>
+
+</br>
+
+<% prom2= @cliente.n1 + @cliente.n2 + @cliente.n3 + @cliente.n4 + @cliente.n5 + @cliente.n6 + @cliente.n7 + @cliente.n8 + @cliente.n9 + @cliente.n10 + @cliente.n11 + @cliente.n12 + @cliente.n13 %>
+
+<% nece = prom2/13 %>
+
+
+Promedio Necesidades :<%= nece %>
+
+</br>
+
+
+<% prom3= @cliente.c1 + @cliente.c2 + @cliente.c3 + @cliente.c4 + @cliente.c5 + @cliente.c6 + @cliente.c7 + @cliente.c8 + @cliente.c9 + @cliente.c10 + @cliente.c11 + @cliente.c12 + @cliente.c13 %>
+
+<% compe = prom3/13 %>
+
+Promedio Competencias :<%= compe %>
+
+
+</br>
+
+
+
+<% @rols.each do |rol| %>
+     
+        <td><%= rol.nombre %></td>
+        <td><%= rol.habilidad%></td>
+        <td><%= rol.necesidad %></td>
+        <td><%= rol.competencia %></td>
+      
+
+     
+    <% end %>
+
+
+
+
+
+
+
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |
 <%= link_to 'Back', clientes_path %>

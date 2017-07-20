@@ -10,6 +10,7 @@ class ClientesController < ApplicationController
   # GET /clientes/1
   # GET /clientes/1.json
   def show
+    @rols = Rol.all
   end
 
   # GET /clientes/new
@@ -73,6 +74,7 @@ class ClientesController < ApplicationController
       params.require(:cliente).permit(:h1,
       :h2,
       :h3,
+      :h4,
       :h5,
       :h6,
       :h7,
@@ -85,6 +87,7 @@ class ClientesController < ApplicationController
       :n1,
       :n2,
       :n3,
+      :n4,
       :n5,
       :n6,
       :n7,
@@ -97,6 +100,7 @@ class ClientesController < ApplicationController
       :c1,
       :c2,
       :c3,
+      :c4,
       :c5,
       :c6,
       :c7,
