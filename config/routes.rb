@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   post 'clientes/new' 
+  post 'welcome/vistarols' 
+
+
+
+  get 'welcome/vistarols'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

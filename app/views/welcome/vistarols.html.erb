@@ -1,0 +1,32 @@
+ <div class="container">
+   <div class="jumbotron">
+    <h1 class="center bold">Roles</h1>
+  </div>
+  <div class="row">
+   <div class="col-md-12">
+     <table class="table table-striped">
+       <thead>
+         <tr>
+           <th class="center"><b>Nombre</b></th>
+           <th class="center"><b>Habilidad</b></th>
+           <th class="center"><b>Necesidad</b></th>
+           <th class="center"><b>Competencia</b></th>
+         </tr>
+       </thead>
+       <tbody>
+         <% @rols.each do |rol| %>
+         <tr>
+           <td class="center"><%= rol.nombre %></td>
+           <td class="center"><%= rol.habilidad %></td>
+           <td class="center"><%= rol.necesidad %></td>
+           <td class="center"><%= rol.competencia %></td>
+         </tr>
+         <% end %>
+       </tbody>
+     </table>
+   </div>
+ </div>
+ <%= link_to 'Volver a Menu', root_path,class:"btn btn-success" %>
+</div>
+
+
