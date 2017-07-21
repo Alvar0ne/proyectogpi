@@ -1,50 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Resultados</title>
+
+    <style>
+
+    .center {
+      text-align: center;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .title-show {
+      margin: 5% 0 5% 0;
+      font-weight: bold;
+      font-size: 40px;
+      }
+
+      td, th{
+        font-size: 20px;
+      }
+
+      #notice {
+        color: green;
+      }
+
+      p {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .row-show {
+        margin-top: 60px;
+      }
+
+    </style>
+
+</head>
+<body> 
 <p id="notice"><%= notice %></p>
+<div class="container"> 
+  <h1 class= "title-show center">Resultados</h1>
+    <div class="promedio">
+      <% prom1= @cliente.h1 + @cliente.h2 + @cliente.h3 + @cliente.h4 + @cliente.h5 + @cliente.h6 + @cliente.h7 + @cliente.h8 + @cliente.h9 + @cliente.h10 + @cliente.h11 + @cliente.h12 + @cliente.h13 %>
+      <% habi = prom1/13 %>
+    </div>
+    <div class="Necesidades">
+    <% prom2= @cliente.n1 + @cliente.n2 + @cliente.n3 + @cliente.n4 + @cliente.n5 + @cliente.n6 + @cliente.n7 + @cliente.n8 + @cliente.n9 + @cliente.n10 + @cliente.n11 + @cliente.n12 + @cliente.n13 %>
+    <% nece = prom2/13 %>
+    </div>
+    <div class="Competencias">
+    <% prom3= @cliente.c1 + @cliente.c2 + @cliente.c3 + @cliente.c4 + @cliente.c5 + @cliente.c6 + @cliente.c7 + @cliente.c8 + @cliente.c9 + @cliente.c10 + @cliente.c11 + @cliente.c12 + @cliente.c13 %>
+    <% compe = prom3/13 %>
+    </div>
 
+  <table class="table table-hover">
+    <thead>
+      <th class="center">Promedio</th>
+      <th class="center">Total</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Habilidades</td>
+        <td class="center"><%= habi %></td>
+      </tr>
+      <tr>
+        <td>Necesidades</td>
+        <td class="center"><%= nece %></td>
+      </tr>
+      <tr>
+        <td>Competencias</td>
+        <td class="center"><%= compe %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <% temp = 100 %>
+    <% temp2 = 100 %>
+    <% temp3 = 100 %>
+    <% temphabi ="hola" %>
+    <% tempnece ="hola" %>
+    <% tempcompe ="hola" %>
 
+    <% @rols.each do |rol| %>
 
+         <% if habi < rol.habilidad %>
 
+           <% dif = (habi - rol.habilidad)*(-1) %>
 
-
-<% prom1= @cliente.h1 + @cliente.h2 + @cliente.h3 + @cliente.h4 + @cliente.h5 + @cliente.h6 + @cliente.h7 + @cliente.h8 + @cliente.h9 + @cliente.h10 + @cliente.h11 + @cliente.h12 + @cliente.h13 %>
-
-<% habi = prom1/13 %>
-
-Promedio Habilidades : <%= habi %>
-
-</br>
-
-<% prom2= @cliente.n1 + @cliente.n2 + @cliente.n3 + @cliente.n4 + @cliente.n5 + @cliente.n6 + @cliente.n7 + @cliente.n8 + @cliente.n9 + @cliente.n10 + @cliente.n11 + @cliente.n12 + @cliente.n13 %>
-
-<% nece = prom2/13 %>
-
-
-Promedio Necesidades :<%= nece %>
-
-</br>
-
-
-<% prom3= @cliente.c1 + @cliente.c2 + @cliente.c3 + @cliente.c4 + @cliente.c5 + @cliente.c6 + @cliente.c7 + @cliente.c8 + @cliente.c9 + @cliente.c10 + @cliente.c11 + @cliente.c12 + @cliente.c13 %>
-
-<% compe = prom3/13 %>
-
-Promedio Competencias :<%= compe %>
-
-
-</br>
-
-
-
-<% @rols.each do |rol| %>
+           <% else %>
      
-        <td><%= rol.nombre %></td>
-        <td><%= rol.habilidad%></td>
-        <td><%= rol.necesidad %></td>
-        <td><%= rol.competencia %></td>
-      
+           <%dif = habi - rol.habilidad %>
 
+           <%end%>
+
+
+           <% if dif < temp %>
+
+           <% temp = dif %>
+           <% temphabi = rol.nombre %>
+        
+           <% end %>
+        
+
+           <% if nece < rol.necesidad %>
+
+           <% dif2 = (nece - rol.necesidad)*(-1) %>
+
+           <% else %>
      
+           <%dif2 = nece - rol.necesidad %>
+
+           <%end%>
+
+
+
+           <% if dif2 < temp2 %>
+
+           <% temp2 = dif2 %>
+           <% tempnece = rol.nombre %>
+         
+           <% end %>
+
+
+           <% if compe < rol.competencia %>
+
+           <% dif3 = (compe - rol.competencia)*(-1) %>
+
+           <% else %>
+     
+           <%dif3 = compe - rol.competencia %>
+
+           <%end%>
+
+
+
+           <% if dif3 < temp3 %>
+
+           <% temp3 = dif3 %>
+           <% tempcompe = rol.nombre %>
+
+           <% end %>
+         
     <% end %>
+  </div>
+   <div class="row row-show">
+     <div class="col-md-5">
+       <p>En habilidades tu perfil se asemeja al siguiente cargo :</p>
+     </div>
+     <div class="col-md-4">
+       <p class="bold"><%= temphabi %></p>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-5">
+       <p>En necesidades tu perfil se asemeja al siguiente cargo  :</p>
+     </div>
+     <div class="col-md-4">
+       <p class="bold"><%= tempnece %></p>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-5">
+       <p>En competencias tu perfil se asemeja al siguiente cargo  :</p>
+     </div>
+     <div class="col-md-4">
+       <p class="bold"><%= tempcompe %></p>
+     </div>
+   </div>
 
+</div>
+
+</br>
+</br>
+</br>
 
 
 
@@ -53,3 +186,6 @@ Promedio Competencias :<%= compe %>
 
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |
 <%= link_to 'Back', clientes_path %>
+
+</body>
+</html>
